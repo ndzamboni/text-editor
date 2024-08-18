@@ -1,24 +1,21 @@
 {
-  "name": "JATE",
+  "name": "text-editor",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "server/server.js",
   "scripts": {
-    "start:dev": "",
-    "start": "",
-    "server": "",
-    "build": "",
-    "install": "",
-    "client": ""
+    "start": "node server/server.js",
+    "start:dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/server.js --ignore client",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "if-env": "^1.0.4"
-  },
-  "devDependencies": {
+    "if-env": "^1.0.4",
     "concurrently": "^5.2.0",
     "nodemon": "^2.0.4"
   }
