@@ -1,1 +1,21 @@
 node_modules
+
+# need to ignore the build folder
+build
+
+# need to ignore the dist folder
+
+dist
+
+# need to ignore the .env file
+
+.env
+
+# need to ignore the .env.local file
+
+.env.local
+
+# need to ignore the .env.development file
+
+.env.development
+

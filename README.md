@@ -125,4 +125,4 @@ Contributions are welcome! To contribute to this project, follow these steps:
 
 ## Questions
 
-If you have any questions or encounter any issues, feel free to open an issue in this repository. You can also reach out to me via email at your-email@example.com. For more projects and contributions, visit my GitHub profile at [ndzamboni](https://github.com/ndzamboni).
+If you have any questions or encounter any issues, feel free to open an issue in this repository. You can also reach out to me via email at ndzamboni@gmail.com. For more projects and contributions, visit my GitHub profile at [ndzamboni](https://github.com/ndzamboni).
