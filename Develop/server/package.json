@@ -4,8 +4,13 @@
     "description": "",
     "main": "server.js",
     "scripts": {
-        "server": "nodemon server.js --ignore client"
-    },
+        "start": "node server.js",
+        "start:dev": "concurrently \"npm run server\" \"npm run build\"",
+        "server": "nodemon server.js --ignore client",
+        "build": "cd ../client && npm run build",
+        "install": "cd ../client && npm install",
+        "client": "cd ../client && npm start"
+},
     "keywords": [],
     "author": "",
     "license": "ISC",

@@ -1,5 +1,3 @@
-// webpack.config.js
-
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const { InjectManifest } = require('workbox-webpack-plugin');
@@ -10,7 +8,7 @@ module.exports = () => {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
-      install: './src/js/install.js'
+      install: './src/js/install.js',
     },
     output: {
       filename: '[name].bundle.js',
@@ -27,7 +25,7 @@ module.exports = () => {
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
       }),
-      // Generate the manifest file
+      // Generate the manifest file using logo.png
       new WebpackPwaManifest({
         name: 'Just Another Text Editor',
         short_name: 'JATE',
@@ -38,14 +36,13 @@ module.exports = () => {
         publicPath: './',
         icons: [
           {
-            src: path.resolve('src/assets/icons/icon_96x96.png'),
-            sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
+            src: path.resolve('src/images/logo.png'), // Use logo.png
+            sizes: [96, 128, 192, 256, 384, 512], // Specify the sizes you need
             destination: path.join('assets', 'icons'),
           },
         ],
       }),
     ],
-
     module: {
       rules: [
         {

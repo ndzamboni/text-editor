@@ -24,7 +24,9 @@ warmStrategyCache({
   strategy: pageCache,
 });
 
-// Register route for caching CSS, JavaScript, and other assets
+registerRoute(({ request }) => request.mode === 'navigate', pageCache);
+
+// Implement asset caching
 registerRoute(
   ({ request }) => 
     request.destination === 'style' || 
@@ -43,5 +45,3 @@ registerRoute(
     ],
   })
 );
-
-registerRoute();
