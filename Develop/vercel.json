@@ -2,8 +2,15 @@
   "version": 2,
   "builds": [
     {
-      "src": "Develop/client/package.json",
+      "src": "Develop/server/server.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "Develop/client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "client/dist"
+      }
     }
   ],
   "routes": [
@@ -11,6 +18,5 @@
       "src": "/(.*)",
       "dest": "/server/server.js"
     }
-  ],
-  "outputDirectory": "client/dist"
+  ]
 }
